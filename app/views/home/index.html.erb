@@ -1,0 +1,12 @@
+<div class="hero-unit">
+  <h2>Welcome to Choice</h2>
+  <p>Let us know how you feel and see how you compare to others!</p>
+  <p>
+    <% if session["user_id"].present? %>
+    Hello, <%= User.find_by_id(session["user_id"]).email %>!
+	<% else %>
+    <a class="btn btn-primary btn-large" href='/users/new'> Sign Up </a>
+    <a class="btn btn-primary btn-large" href='/login'> Login </a>
+	<% end %> 
+  </p>
+</div>

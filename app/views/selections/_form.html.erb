@@ -1,0 +1,26 @@
+<%= form_for @selection, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :users, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :users, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :categories, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :categories, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :brands, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :brands, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                selections_path, :class => 'btn' %>
+  </div>
+<% end %>
